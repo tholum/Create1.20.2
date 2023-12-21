@@ -123,12 +123,12 @@ def compat(DependencyHandler deps) {
 // setup the three recipe viewer mods
 def recipeViewers(DependencyHandler deps) {
     // EMI
-    deps.modCompileOnly("dev.emi:emi-fabric:$emi_version:api") { transitive = false }
+    // deps.modCompileOnly("dev.emi:emi-fabric:$emi_version:api") { transitive = false }
     // JEI
     deps.modCompileOnly("mezz.jei:jei-$minecraft_version-fabric:$jei_version") { transitive = false }
     // REI
-    deps.modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:$rei_version")
-    deps.modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:$rei_version")
+    // deps.modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:$rei_version")
+    // deps.modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:$rei_version")
 
     switch (recipe_viewer.toLowerCase(Locale.ROOT)) {
         case "jei": deps.modLocalRuntime("mezz.jei:jei-$minecraft_version-fabric:$jei_version"); break
